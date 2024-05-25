@@ -137,5 +137,11 @@
     let pic = document.createElement('img'); //создаем img
     pic.src = tg.initDataUnsafe.user.photo_url; //задаём src 
     usercard.appendChild(pic); //добавляем элемент в карточку 
+
+  const params = new URLSearchParams(Telegram.WebApp.initData);
+
+const userData = Object.fromEntries(params);
+userData.user = JSON.parse(userData.user);
+
 </script>
 </html>
